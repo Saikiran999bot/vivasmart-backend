@@ -88,7 +88,7 @@ app.post('/api/analyze', analyzeLimiter, async (req, res) => {
     }
 
     const prompt = `You are an MSBTE polytechnic viva examiner. Analyze this project and return ONLY valid JSON with:
-- questions: array of 10 {q,a} objects (viva questions with detailed answers)
+- questions: array of 10 {q,a} objects (viva questions with short and understandable answers)
 - keywords: array of 20 strings (key technical terms)
 - diagrams: array of 5 {title,explanation} objects (diagrams the examiner might ask about)
 - projectTitle: string (inferred project name)
@@ -97,7 +97,7 @@ PROJECT TEXT:
 ${text}`;
 
     // Call Gemini API (key stays on server!)
-    const GEMINI_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${process.env.GEMINI_API_KEY}`;
+    const GEMINI_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-3-pro:generateContent?key=${process.env.GEMINI_API_KEY}`;
 
     const geminiRes = await fetch(GEMINI_URL, {
       method: 'POST',
