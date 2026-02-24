@@ -97,7 +97,7 @@ PROJECT TEXT:
 ${text}`;
 
     // Call Gemini API (key stays on server!)
-    const GEMINI_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-3-pro:generateContent?key=${process.env.GEMINI_API_KEY}`;
+    const GEMINI_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${process.env.GEMINI_API_KEY}`;
 
     const geminiRes = await fetch(GEMINI_URL, {
       method: 'POST',
