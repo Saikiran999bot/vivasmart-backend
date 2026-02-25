@@ -1,7 +1,7 @@
 {
   "name": "vivasmart-backend",
-  "version": "3.0.0",
-  "description": "VivaSmart Backend — Gemini proxy + Supabase database v3",
+  "version": "2.0.0",
+  "description": "VivaSmart backend - Gemini proxy + Supabase database",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
