@@ -83,10 +83,8 @@ GET  https://your-url.onrender.com/health  → {"status":"healthy"}
 ---
 
 ## 🔑 Default Admin Credentials
-```
-Email:  saikiranjinde49@gmail.com
-Secret: viva2026
-```
+
+
 Change `ADMIN_SECRET` in Render environment to something secure for production.
 
 ---
