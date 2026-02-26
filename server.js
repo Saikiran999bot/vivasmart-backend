@@ -150,9 +150,9 @@ app.post('/api/analyze', analyzeLimiter, async (req,res) => {
       }
     }
     const URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${process.env.GEMINI_API_KEY}`;
-    const prompt = `You are an expert MSBTE polytechnic viva examiner. Analyze this student project and return ONLY valid JSON with:
-- questions: array of 10 {q, a} objects — challenging viva questions with detailed answers
-- keywords: array of 20 strings — key technical terms
+    const prompt = `You are an expert viva examiner. Analyze this student project and return ONLY valid JSON with:
+- questions: array of 10 {q, a} objects — viva questions with short,understandable and easy to read answers
+- keywords: array of 10 strings — key technical terms
 - diagrams: array of 5 {title, explanation} objects — important diagrams to prepare
 - projectTitle: string — inferred project name
 PROJECT TEXT: ${text}`;
